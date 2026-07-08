@@ -175,7 +175,7 @@ function renderPage(b) {
   ];
   temoignages.forEach(function(t){
     var div=document.createElement("div");div.className="temoignage";
-    div.innerHTML="<p>""+t.texte+""</p><span>— "+t.nom+"</span>";
+    div.innerHTML="<p>"+t.texte+"</p><span>— "+t.nom+"</span>";
     temCard.appendChild(div);
   });
   section.appendChild(temCard);
@@ -228,9 +228,7 @@ function renderPage(b) {
           client_adresse:"",
           client_tel:tel,
           client_email:email,
-          commande_detail:"NOUVELLE PROSPECT RECRUTEMENT
-
-Motivation : "+motiv,
+          commande_detail:"NOUVELLE PROSPECT RECRUTEMENT - Motivation: "+motiv,
           total:"Prospect recrutement"
         });
       }
