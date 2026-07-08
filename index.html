@@ -220,16 +220,14 @@ function renderPage(b) {
     }).then(function(){
       // Envoyer email à la VDI
       if(b.emailVdi){
-        emailjs.send("service_wr9mlhk","template_nkfnrnd",{
+      emailjs.send("service_wr9mlhk","template_s0huhum",{
           vdi_prenom:b.prenom||"Conseillère",
           to_email:b.emailVdi,
-          client_nom:nom,
-          client_prenom:prenom,
-          client_adresse:"",
-          client_tel:tel,
-          client_email:email,
-          commande_detail:"NOUVELLE PROSPECT RECRUTEMENT - Motivation: "+motiv,
-          total:"Prospect recrutement"
+          prospect_prenom:prenom,
+          prospect_nom:nom,
+          prospect_email:email,
+          prospect_tel:tel,
+          prospect_motiv:motiv||"Non renseignée"
         });
       }
       // Afficher confirmation
